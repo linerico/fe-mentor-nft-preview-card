@@ -127,6 +127,8 @@ p {
 
 .profile img {
   width: 30px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
 }
 
 .profile .profile-title span {
