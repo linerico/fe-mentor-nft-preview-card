@@ -1,0 +1,152 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  --dark-blue-main: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Outfit";
+  background-color: var(--dark-blue-main);
+  color: white;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid black;
+  padding: 25px;
+  background-color: var(--dark-blue-card);
+  border-radius: 15px;
+}
+
+.card .image {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card .image:hover .show {
+  cursor: pointer;
+  display: flex;
+}
+
+.card .image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .image .show {
+  background-color: hsla(178, 100%, 50%, 50%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.card .image .show img {
+  width: 50px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  border-bottom: 2px solid var(--dark-blue-line);
+}
+
+.main .title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.main .title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.main p {
+  color: var(--soft-blue);
+  font-weight: 100;
+  margin: 20px 0;
+}
+
+.main .price {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.main .price .price-child {
+  display: flex;
+  gap: 5px;
+  color: var(--cyan);
+  margin-bottom: 20px;
+}
+
+.main .price .price-child img {
+  width: auto;
+  height: 20px;
+  object-fit: contain;
+}
+
+.main .price .price-child .offer {
+  color: var(--white);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--soft-blue);
+}
+
+.profile img {
+  width: 30px;
+}
+
+.profile .profile-title span {
+  color: var(--white);
+}
+
+.profile .profile-title span:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+/* .main .price .price-child {
+  gap: 0;
+  display: flex;
+} */
+
+/* Desktop */
+@media (min-width: 1440px) {
+}
+
+/* Mobile */
+@media (min-width: 375px) {
+}
